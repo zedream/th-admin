@@ -1,0 +1,257 @@
+
+/* 自定义Message弹框--start */
+.message_wrapping {
+  position: fixed;
+  z-index: 20200901;
+  width: 320px;
+  height: 46px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: -48px;
+  padding: 0 24px;
+  opacity: 0;
+  transition: opacity 0.4s, top 0.3s;
+}
+.info {
+  background: #dee2ec;
+  color: #a0a0a0;
+  border: 1px solid #d0d7e8;
+}
+.success {
+  background: #d4ecd2;
+  color: #7ac774;
+  border: 1px solid #bee8ba;
+}
+.warning {
+  background: #ffeec8;
+  color: #f5a94c;
+  border: 1px solid #f5e3bc;
+}
+.error {
+  background: #f9dbdb;
+  color: #ea7474;
+  border: 1px solid #f9caca;
+}
+.message_fade {
+  opacity: 1;
+  top: 16px;
+}
+/* 自定义Message--end */
+
+/* 自定义Alert弹框--start */
+.alert_wrapping {
+  position: fixed;
+  z-index: 20200902;
+  padding: 18px 36px;
+  color: #f3f3f3;
+  border-radius: 4px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -400%);
+  opacity: 0;
+  transition: opacity 0.4s;
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.6);
+}
+.alert_fade {
+  opacity: 1;
+}
+/* 自定义Alert弹框--end */
+
+/* 自定义Notice弹框--start */
+.notice_wrapping {
+  position: fixed;
+  z-index: 202009011;
+  width: 320px;
+  padding: 16px 24px;
+  color: #847373;
+  border-radius: 4px;
+  top: 20px;
+  right: -220px;
+  opacity: 0;
+  transition: all 0.4s;
+  display: inline-block;
+  background: #fff;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+}
+.notice_top {
+  font-size: 20px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+.notice_title {
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+}
+.icon-notice-none {
+  display: none;
+}
+.icon-notice-success {
+  color: #67c23a;
+  margin-right: 12px;
+}
+.icon-notice-wran {
+  color: #e6a23c;
+  margin-right: 12px;
+}
+.icon-notice-info {
+  color: #909399;
+  margin-right: 12px;
+}
+.icon-notice-error {
+  color: #f56c6c;
+  margin-right: 12px;
+}
+.notice_bottom {
+  font-size: 15px;
+}
+.notice_close {
+  color: #b3adb0;
+  position: absolute;
+  right: 8px;
+  cursor: pointer;
+  font-size: 24px!important;
+}
+.notice_fade {
+  opacity: 1;
+  right: 20px;
+}
+.notice_opacity {
+  opacity: 0;
+}
+/* 自定义Notice弹框--end */
+
+/* 自定义Dialog弹框--start */
+.dialog_wrapping {
+  position: fixed;
+  z-index: 20200911;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s;
+  opacity: 0;
+}
+.dialog_box {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  margin: 0 auto;
+  transform: translateY(-100%);
+  width: 370px;
+  padding: 12px 24px;
+  background: #FFFFFF;
+  border-radius: 4px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+  opacity: 0;
+  transition: all 0.3s;
+}
+.dialog_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dialog_title {
+  color: #303133;
+  font-size: 18px;
+}
+.dialog_close {
+  color: #b3adb0;
+  right: 8px;
+  cursor: pointer;
+}
+.dialog_mid {
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+}
+.confirm_icon {
+  color: #e6a23c;
+  margin-right: 12px;
+}
+.dialog_message {
+  color: #606266;
+  font-size: 14px;
+}
+.dialog_btm {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.btn_box {
+  display: flex;
+  align-items: center;
+}
+.btn_box button:last-child {
+  margin-left: 12px;
+}
+.dialog_fade {
+  opacity: 1;
+}
+.dialog_box_fade {
+  opacity: 1;
+  transform: translateY(-90%);
+}
+/* 自定义Dialog弹框--end */
+
+/* common css */
+.th_button {
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #dcdfe6;
+  color: #606266;
+  -webkit-appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  transition: .1s;
+  font-weight: 500;
+  user-select: none;
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.th_button:hover {
+  color: #409eff;
+  border-color: #c6e2ff;
+  background-color: #ecf5ff;
+}
+.th_button:active {
+  color: #3a8ee6;
+  border-color: #3a8ee6;
+  outline: none;
+}
+.th_btn_primary {
+  color: #fff;
+  background-color: #409eff;
+  border-color: #409eff;
+}
+.th_btn_primary:hover {
+  background: #66b1ff;
+  border-color: #66b1ff;
+  color: #fff;
+}
+.th_btn_primary:active {
+  background: #3a8ee6;
+  border-color: #3a8ee6;
+  color: #fff;
+}
+.th_btn_small {
+  padding: 9px 15px;
+  font-size: 12px;
+  border-radius: 3px;
+}
+

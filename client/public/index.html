@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.png">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+    .loading {
+        width: 100vw;
+        height: 100vh;
+        background: #2f3542;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 24px;
+    }
+    .img{
+        width: 30px;
+        height: 30px;
+        border: 2px solid;
+        border-color: #1e90ff #1e90ff transparent #1e90ff;
+        border-radius: 50%;
+        animation: circle 1s infinite linear;
+    }
+    @keyframes circle{
+        0%{ transform: rotate(0deg); }
+        25%{ transform: rotate(110deg); }
+        50%{ transform: rotate(220deg); }
+        75%{ transform: rotate(290deg); }
+        100%{ transform: rotate(360deg); }
+    }
+    .tips {
+        font-size: 14px;
+        margin-top: 8px;
+    }
+</style>
+<body>
+<noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+</noscript>
+
+<div id="app">
+    <div class="loading">
+        <i class="img"></i>
+        <div class="tips">资源首次加载中，请耐心等待...</div>
+    </div>
+    <img src="../src/assets/bg.png" style="display: none;">
+</div>
+<!-- built files will be auto injected -->
+</body>
+</html>
